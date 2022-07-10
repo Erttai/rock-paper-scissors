@@ -5,14 +5,90 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <script src="script.js" defer></script>
   </head>
 
   <body>
-    <h1>THE TITLE OF YOUR WEBPAGE</h1>
-    <div id="container"></div>
-    <button onclick="alert('Hello World')">Click Me</button>
-    <!-- <button id="btn">Click Me</button> -->
-    <button id="btn">Click Me Too</button>
+    <h1>rock paper scissors!</h1>
+    <p>First to score 5 points wins the game</p>
+
+    <div class="game-wrapper">
+      <div class="card">
+        <p>You</p>
+        <div class="container">
+          <div class="btns">
+            <button class="btn">
+              <p class="rock">✊</p>
+              <p>rock</p>
+            </button>
+            <button class="btn">
+              <p class="paper">✋</p>
+              <p>paper</p>
+            </button>
+            <button class="btn">
+              <p class="scissors">✌️</p>
+              <p>scissors</p>
+            </button>
+          </div>
+          <div class="col">
+            <img src="/img/human.svg" alt="human-icon" />
+            <div class="human">
+              <p>SCORE</p>
+              <p class="human__score text">3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <p>Computer</p>
+        <div class="container">
+          <div class="btns">
+            <button class="btn">
+              <p class="rock" id="rock">?</p>
+              <p>rock</p>
+            </button>
+            <button class="btn">
+              <p class="paper" id="paper">?</p>
+              <p>paper</p>
+            </button>
+            <button class="btn">
+              <p class="scissors" id="scissors">?</p>
+              <p>scissors</p>
+            </button>
+          </div>
+          <div class="col">
+            <img src="/img/laptop-solid-grey.svg" alt="laptop-icon" />
+            <div class="computer">
+              <p>SCORE</p>
+              <p class="computer__score text">3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="result"></p>
+
+    <div class="modal hidden">
+      <p class="message">You lost...</p>
+      <button class="restart">play again</button>
+    </div>
+    <div class="overlay hidden"></div>
   </body>
 </html>
